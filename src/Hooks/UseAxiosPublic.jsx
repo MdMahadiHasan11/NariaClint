@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const axiosPublic = axios.create({
-  // baseURL: 'http://localhost:5000', // your API base URL
-  baseURL: 'https://narialandingserver.vercel.app',
+  baseURL: 'https://naria-server-landing.vercel.app', // your API base URL
+  // baseURL: 'https://narialandingserver.vercel.app',
 });
 
 const useAxiosPublic = () => {

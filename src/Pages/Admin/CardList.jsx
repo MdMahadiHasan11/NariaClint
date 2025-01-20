@@ -7,7 +7,7 @@ export default function CardList() {
     const [cards, setCards] = useState([]);
     const [error, setError] = useState("");
 
-    const apiBaseUrl = "https://narialandingserver.vercel.app"; // Replace with your backend URL
+    const apiBaseUrl = "https://naria-server-landing.vercel.app"; // Replace with your backend URL
     const imgbbApiKey = "5c49c7e28a6807775bcd1899796bdc4b";
 
     // Fetch cards on component mount
