@@ -2,14 +2,14 @@ import  { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Swal from "sweetalert2";
-import useAxiosPublic from "../../Hooks/UseAxiosPublic";
+// import useAxiosPublic from "../../Hooks/UseAxiosPublic";
 
 export default function CardList() {
     const [cards, setCards] = useState([]);
     const [error, setError] = useState("");
-    const apiBaseUrl = useAxiosPublic();
+    // const apiBaseUrl = useAxiosPublic();
 
-    // const apiBaseUrl = "https://naria-server-landing.vercel.app"; // Replace with your backend URL
+    const apiBaseUrl = "https://new-server-ettu.vercel.app"; // Replace with your backend URL
     const imgbbApiKey = "5c49c7e28a6807775bcd1899796bdc4b";
 
     // Fetch cards on component mount
