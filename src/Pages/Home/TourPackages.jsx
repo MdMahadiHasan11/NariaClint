@@ -68,7 +68,7 @@ export default function TourPackages() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-[#2B3B5B] to-[#FF8C00] text-transparent bg-clip-text">
-            Our Popular Tour Packages
+            Study in Your Dream Country 
           </h2>
           <div className="w-24 h-2 bg-gradient-to-r from-[#2B3B5B] to-[#FF8C00] mx-auto rounded-full"></div>
         </motion.div>

@@ -7,7 +7,7 @@ export default function CardList() {
     const [cards, setCards] = useState([]);
     const [error, setError] = useState("");
 
-    const apiBaseUrl = "https://naria-server-landing.vercel.app"; // Replace with your backend URL
+    const apiBaseUrl = "http://localhost:5000"; // Replace with your backend URL
     const imgbbApiKey = "5c49c7e28a6807775bcd1899796bdc4b";
 
     // Fetch cards on component mount
@@ -62,6 +62,8 @@ export default function CardList() {
                     description: data.description, // Add description field
                     imageUrl: imgRes.data.data.display_url, // URL from ImgBB
                 };
+                console.log('image upload');
+                console.log(newCard);
 
                 // Send the card data to your backend
                 const res = await axios.post(`${apiBaseUrl}/card`, newCard);
