@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosPublic = axios.create({
-  baseURL: 'https://new-server-ettu.vercel.app', // your API base URL
+  baseURL: 'https://new-server-chi.vercel.app', // your API base URL
   // baseURL: 'http://localhost:5000',
 });
 

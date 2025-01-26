@@ -21,7 +21,9 @@ function NewsSlider({ announcements }) {
   };
 
   return (
-    <div className="relative border-2 bg-gradient-to-r   from-orange-500 to-orange-300 py-6 px-4">
+    <div className="relative border-2  py-6 px-4">
+
+      <></>
       {announcements.length > 0 ? (
         <Slider {...sliderSettings}>
           {announcements.map((announcement, index) => (
@@ -29,9 +31,10 @@ function NewsSlider({ announcements }) {
               key={announcement._id || index} // Unique key for each announcement
               className="flex items-center justify-center h-full" // Center the content vertically and horizontally
             >
-              <p className="text-center font-bold text-white text-xl sm:text-2xl md:text-2xl lg:text-2xl mx-auto px-12">
+              <p className="text-4xl py-10 text-center md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-[#2B3B5B] to-[#FF8C00] text-transparent bg-clip-text">
                 {announcement.title} - {announcement.content}
               </p>
+              <div className="w-24 h-2 bg-gradient-to-r from-[#2B3B5B] to-[#FF8C00] mx-auto rounded-full"></div>
             </div>
           ))}
         </Slider>
@@ -68,11 +71,13 @@ export default function Navbar() {
     <header className="bg-white text-blue-900">
       <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="w-40">
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tJda3re8jLVoRy9DiCugIu6r1AEsR9.png"
-            alt="Naria Holidays"
-            className="object-contain w-full"
-          />
+          <a href="/" className="block">
+            <img
+              src="https://i.ibb.co/zbPsvkH/Whats-App-Image-2025-01-26-at-12-40-58-2d586547.jpg"
+              alt="Naria Holidays"
+              className="object-contain w-20 h-20" // Adjusted size
+            />
+          </a>
         </div>
         <div className="hidden md:flex space-x-6">
           <NavLink

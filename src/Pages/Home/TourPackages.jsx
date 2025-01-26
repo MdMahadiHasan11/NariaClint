@@ -125,14 +125,14 @@ export default function TourPackages() {
 
           {/* Navigation Arrows */}
           <button
-            className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-10 text-white rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-[#FF8C00] z-10 transition duration-300"
+            className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-10 z-10 transition duration-300"
             onClick={handlePrevSlide} // Use the handler for the left arrow button
             style={{ left: '0', zIndex: 10 }}
           >
             <ChevronLeft className="w-6 h-6 mx-auto" />
           </button>
           <button
-            className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-10 text-white  rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-[#FF8C00] z-10 transition duration-300"
+            className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-10 z-10 transition duration-300"
             onClick={handleNextSlide} // Use the handler for the right arrow button
             style={{ right: '0', zIndex: 10 }}
           >
@@ -157,7 +157,7 @@ export default function TourPackages() {
             className="bg-white rounded-lg overflow-hidden w-full max-w-lg sm:max-w-xl max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-square w-full max-w-[300px] mx-auto">
+            <div className="relative aspect-square w-full  mx-auto">
               <img
                 src={selectedPackage.imageUrl}
                 alt={selectedPackage.title}
@@ -172,17 +172,17 @@ export default function TourPackages() {
                   {selectedPackage.title}
                 </h2>
                 {/* Header */}
-                <p className="text-base text-gray-600 mb-2">{selectedPackage.header}</p>
+                <p className="text-base text-gray-600 mb-2 font-bold">{selectedPackage.header}</p>
                 {/* Subcontent */}
                 <div className="text-sm text-gray-700 space-y-2">
-                  <p>{selectedPackage.subHeader}</p>
-                  <p>{selectedPackage.description}</p>
+                  <p className='font-semibold'>{selectedPackage.subHeader}</p>
+                  <p className='pb-5'>{selectedPackage.description}</p>
                   <p>{selectedPackage.shortDescription}</p>
                 </div>
               </div>
 
               {/* Footer with Button */}
-              <div className="p-4 bg-gray-100 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-2">
+              <div className="p-2 bg-gray-100 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-2">
                 <button
                   className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 ease-in-out text-sm focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
                   onClick={() => setSelectedPackage(null)}
